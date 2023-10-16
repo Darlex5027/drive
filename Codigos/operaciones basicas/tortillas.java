@@ -13,7 +13,7 @@ public class tortillas {
 		v2 = entrada.nextInt();
 		System.out.println("Digita la venta 3:");
 		v3 = entrada.nextInt();
-		System.out.print("Tu total es:"+(sueldo+((v1+v2+v3)*10));
+		System.out.print("Tu total es:"+(sueldo+((v1+v2+v3)*10)));
 
 
 	}
