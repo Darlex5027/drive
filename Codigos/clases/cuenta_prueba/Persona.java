@@ -22,10 +22,12 @@ public class Persona {
 		this.altura=_altura;
 	}
 	public boolean esMayorDeEdad(){
+		boolean exit=false;
 		if(edad>18)
-			return true;
+			exit=true;
 		if(edad<18)
-			return false;		
+			exit=false;		
+		return exit;
 	}
 	public void comprobarSexo (char _sexo){
 		if(_sexo=='F')
@@ -66,4 +68,4 @@ public class Persona {
 			return 1;
 
 	}
-}}
+}
