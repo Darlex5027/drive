@@ -13,7 +13,7 @@ public class Persona {
 		this.edad=_edad;
 		comprobarSexo(_sexo);
 	}
-	public Persona (String _nombre, byte _edad, String DNI,char _sexo, float _peso, float _altura){
+	public Persona (String _nombre, byte _edad,char _sexo, float _peso, float _altura){
 		this.nombre=_nombre;
 		this.edad=_edad;
 		this.DNI=generaDNI();
@@ -60,12 +60,14 @@ public class Persona {
 
 	public int calcularIMC(){
 		float imc=(peso/(altura*altura));
+		int exit=0;
 		if(imc<20)
-			return -1;
+			exit= -1;
 		if(imc>=20&&imc<=25)
-			return 0;
+			exit= 0;
 		if(imc>25)
-			return 1;
+			exit= 1;
+		return exit;
 
 	}
 }
