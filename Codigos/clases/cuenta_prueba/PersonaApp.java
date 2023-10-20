@@ -2,8 +2,9 @@ import java.util.Scanner;
 public class PersonaApp{
 	public static void main (String[] args){
 		Scanner entrada = new Scanner(System.in);
+		
 		String nombre ="";
-		byte edad=0;
+		int edad=0;
 		char sexo='c';
 		float peso =0;
 		float altura=0;
@@ -29,11 +30,11 @@ public class PersonaApp{
 		p3.setAltura(1.75f);
 		p3.generaDNI();
 
-		System.out.println("Persona 1 es mayor de edad?: "+p1.esMayorDeEdad());
+		System.out.println("/nPersona 1 es mayor de edad?: "+p1.esMayorDeEdad());
 		System.out.println("Persona 2 es mayor de edad?: "+p2.esMayorDeEdad());
 		System.out.println("Persona 3 es mayor de edad?: "+p3.esMayorDeEdad());
 
-		System.out.println(p1);
+		System.out.println("\n"+p1);
 		System.out.println(p2);
 		System.out.println(p3);		
 	}

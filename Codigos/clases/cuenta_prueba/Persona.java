@@ -1,6 +1,6 @@
 public class Persona {
 	private String nombre ="";
-	private	byte edad=0;
+	private	int edad=0;
 	private	String DNI="";
 	private	char sexo='M';
 	private	float peso=0;
@@ -8,12 +8,12 @@ public class Persona {
 
 	public Persona (){	
 	}
-	public Persona (String _nombre, byte _edad, char _sexo){
+	public Persona (String _nombre, int _edad, char _sexo){
 		this.nombre=_nombre;
 		this.edad=_edad;
 		comprobarSexo(_sexo);
 	}
-	public Persona (String _nombre, byte _edad,char _sexo, float _peso, float _altura){
+	public Persona (String _nombre, int  _edad,char _sexo, float _peso, float _altura){
 		this.nombre=_nombre;
 		this.edad=_edad;
 		this.DNI=generaDNI();
@@ -45,7 +45,7 @@ public class Persona {
 	public void setNombre(String _nombre){
 		this.nombre=_nombre;
 	}
-	public void setEdad(byte _edad){
+	public void setEdad(int _edad){
 		this.edad=_edad;
 	}
 	public void setSexo(char _sexo){
