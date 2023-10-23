@@ -1,0 +1,19 @@
+public class Gato{
+	private int patas;
+	private String name;
+
+	//Setter
+	public void setPatas(int _patas){
+		this.patas= _patas;
+	}
+	public void setName(String _name){
+		this.name=_name;
+	}
+	//Setter
+	public int getPatas(){
+		return this.patas;
+	}
+	public String getName(){
+		return this.name;
+	}
+}

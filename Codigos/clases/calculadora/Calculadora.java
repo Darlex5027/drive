@@ -1,9 +1,12 @@
 import java.util.Scanner;
 public class Calculadora{
 	Scanner entrada=new Scanner(System.in);
-	float n1=0;
-	float n2=0;
-	float n3=0;
+	private String _n1;
+	private String _n2;
+
+	private float n1=0;
+	private	float n2=0;
+	private	float n3=0;
 
 	public void menu(){
 		int i=0;
@@ -33,11 +36,44 @@ public class Calculadora{
 		
 		
 	}
+	
+	public boolean IsNumeric(String _cadena){
+		try{
+			Float.parseFloat(_cadena);
+			return true;
+		}catch(NumberFormatException exception){
+
+			return false;
+		}
+	}
+
 	public void leer(){
-		System.out.println("Digita el nùmero 1:");
-		this.n1=entrada.nextFloat();
-		System.out.println("Digita el nùmero 2:");
-		this.n2=entrada.nextFloat();
+		leer1();
+		leer2();
+	}
+
+	public void leer1(){
+		System.out.println("Digita el primer nùmero");
+		this._n1=entrada.next();
+		if(!IsNumeric(_n1)){
+			leer1();
+		}
+		if(IsNumeric(_n1)){
+			this.n1=Float.parseFloat(this._n1);
+			leer2();	
+		}
+
+	}
+
+	public void leer2(){
+		System.out.println("Digita el segundo nùmero");
+		this._n2=entrada.next();
+		if(!IsNumeric(_n2)){
+			leer2();
+		}
+		if(IsNumeric(_n2)){
+			this.n2=Float.parseFloat(this._n2);
+		}
 	}
 	public void suma(){
 		n3=n1+n2;
@@ -49,7 +85,7 @@ public class Calculadora{
 	}
 	public void dividir(){
 		if(n2==0){
-			System.out.println("No se puede dividir entre 0, intente de nuevo");
+			System.out.println("El segundo nùmero no puede ser igual a 0 en una divisiòn");
 			leer();
 			dividir();
 		}else{
