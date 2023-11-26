@@ -29,8 +29,8 @@ public class Electrodomestico {
     //Indica el consumo energetico del electrodomestico
     protected char consumoEnergetico;
    
-    Peso del electrodomestico
-	//protected double peso;
+    //Peso del electrodomestico
+	protected double peso;
    
     //Métodos privados
    
