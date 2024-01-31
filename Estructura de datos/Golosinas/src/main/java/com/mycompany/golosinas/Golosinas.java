@@ -43,7 +43,7 @@ public class Golosinas {
        do{
            mensaje = "Digita la Fila y luego la columan del dulce que quieres \nEjemplo: Cachetada '32' \n Para Salir digita 5027\n";
         for(int i=0;i<nombres.length;i++){
-            mensaje += "Fila "+(i+1)+"\n";
+            mensaje += "Fila "+(char)(i+97)+"\n";
                 for(int j=0;j<nombres[i].length;j++){
                     mensaje+=nombres[i][j]+" Precio: $";
                     mensaje+=precios[i][j]+" Exist:";
@@ -51,10 +51,19 @@ public class Golosinas {
                 }
             mensaje+="\n";
         }
-        op = (int) Integer.parseInt(JOptionPane.showInputDialog(mensaje));
-        int fila=op/10;
-        int columna=op-(fila*10);
-        if(op==5027){
+        String cadena = JOptionPane.showInputDialog(mensaje);
+        char[] chars = cadena.toCharArray();
+        
+        
+        int oc[]= new int[chars.length];
+        for (int i = 0; i < chars.length; i++) {
+            oc[i]= (int) chars[i];
+             System.out.println(chars[i]+""+oc[i]); // Imprime H, o, l, a, ..., o
+        }
+        int fila=oc[0]-96;
+        int columna=oc[1]-48;
+        System.out.println(fila+","+columna); // Imprime H, o, l, a, ..., o
+        if(cadena.equals("5027")){
             JOptionPane.showMessageDialog(null, "Que tengas buen día");
             System. exit(0);
         }
